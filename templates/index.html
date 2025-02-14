@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <title>Crop Predictor</title>
+</head>
+<body>
+   <nav class="navbar">
+    <div class="logo">
+        <a href="#home">
+           <h4>Crop First</h4>
+        </a>
+    </div>
+    <div class="list">
+      
+        <ul>
+            
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a target="_blank" href="https://wa.me/7620753172">Contact us</a></li>
+            <li><a href="">Services</a></li>
+        </ul>
+    </div>
+   </nav>
+   <div id="home" class="container">
+    <div class="login">
+        <h1>Crop Predictor Model</h1>
+        <form action="{{url_for('predict')}}" method="post">
+
+            <label for="nitrogen">Nitrogen : </label><input type="text" name="nitrogen" placeholder="Enter Nitrogen value" id=""> 
+            <label for="phosphorous">Phosphorous : </label><input type="text" name="phosphorous" placeholder="Enter Phosphorous value" id=""> 
+            <label for="pottasium">Pottasium : </label><input type="text" name="pottasium" placeholder="Enter Pottasium value" id=""> 
+            <label for="temperature">Temperature : </label><input type="text" name="temperature" placeholder="Enter Temperature value" id=""> 
+            <label for="humidity">Humidity : </label><input type="text" name="humidity" placeholder="Enter Humidity value" id=""> 
+            <label for="ph">PH : </label><input type="text" name="ph" placeholder="Enter PH value" id=""> 
+            <label for="rainfall">Rainfall : </label><input type="text" name="rainfall" placeholder="Enter Rainfall value" id=""> 
+
+            <button type="submit" class="btn">Predict</button>
+        </form>
+        <h1 id="predict">{{Prediction_text}}</h1>
+    </div>
+    </div>
+    <section id="about" class="about-project">
+        <div class="about-container">
+            <h2>About Our Crop Prediction Project</h2>
+            <p class="intro">Our project leverages advanced data analysis and machine learning techniques to predict optimal crop yields based on various environmental and soil factors. By understanding these factors, farmers can make informed decisions to maximize their harvests.</p>
+    
+            <div class="card-container">
+                <div class="card">
+                    <h3>Data-Driven Insights</h3>
+                    <p>We analyze key parameters such as Nitrogen, Phosphorus, Potassium (NPK) ratios, rainfall, temperature, humidity, and pH levels to provide accurate crop predictions. Our algorithms are trained on extensive datasets to ensure reliable results.</p>
+                    <ul>
+                        <li>Real-time data processing</li>
+                        <li>Machine Learning prediction</li>
+                        <li>Suggestions to improve crop yeild</li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h3>Empowering Farmers</h3>
+                    <p>Our goal is to empower farmers with the knowledge they need to optimize their crop yields and resource utilization. By providing timely and accurate predictions, we help reduce uncertainty and improve agricultural productivity.</p>
+                    <ul>
+                        <li>Reduction of yield uncertainty</li>
+                        <li>Improve agricultural productivity</li>
+                        <li>Optimization of crop yeild and resource utilization</li>
+                    </ul>
+                </div>
+    
+                <div class="card">
+                    <h3>Sustainable Agriculture</h3>
+                    <p>By enabling precision farming practices, we contribute to sustainable agriculture by reducing waste, minimizing environmental impact, and promoting efficient use of resources. Our project helps pave the way for a more sustainable and resilient agricultural sector.</p>
+                     <ul>
+                        <li>Reduction of waste</li>
+                        <li>Minimize environment impact</li>
+                        <li>Sustainable and resilient agricultural sector</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About Us</h3>
+                <p>I am Prasd Kandekar and I am a Data Science and Machine Learning Enthusiast. <br> I enjoy tackling complex problems and using data to find insights. I am second year computer engineering student at Dr. D. Y. Patil Institute of Technology, Pimpri , Pune</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li><a href="mailto:kandekarprasadtrimbak@gmail.com">kandekarprasadtrimbak@gmail.com</a></li>
+                    <li>Sant Tukaram Naga, Pimpri , Pune</li>
+                    <li>7620753172</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/prasadkandekar.in/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/prasad-kandekar/" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Crop First. All rights reserved.
+        </div>
+    </footer>
+</body>
+</html>
